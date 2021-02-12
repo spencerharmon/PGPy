@@ -5,10 +5,10 @@ sudo apt-get -y install libffi-dev gnupg2
 if [ -z "${TOXENV}" ]; then
     sudo apt-get -y install gpgsm libassuan-dev libgpg-error-dev swig
 
-    # build/install gpgme 1.8.0 manually
-    wget https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.7.0.tar.bz2
-    tar -xvf gpgme-1.7.0.tar.bz2
-    pushd gpgme-1.7.0
+    # build/install gpgme 1.10.0 manually
+    wget https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.10.0.tar.bz2
+    tar -xvf gpgme-1.10.0.tar.bz2
+    pushd gpgme-1.10.0
     ./configure \
         --prefix=/usr \
         --disable-fd-passing \
