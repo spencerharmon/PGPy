@@ -10,7 +10,7 @@ if [ -z "${TOXENV}" ]; then
     tar -xvf gpgme-1.10.0.tar.bz2
     pushd gpgme-1.10.0
     ./configure \
-        --prefix=/usr \
+        --prefix="$(python -c 'import sys; print(sys.prefix)')" \
         --disable-fd-passing \
         --disable-static \
         --disable-gpgsm-test \
