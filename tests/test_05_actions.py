@@ -301,6 +301,7 @@ class TestPGPKey_Management(object):
 
         # now that we've added it, it should be a PrivSubKeyV4
         assert isinstance(subkey._key, PrivSubKeyV4)
+        assert key.verify(PGPKey.from_blob(bytes(subkey)))
 
         # self-verify
         with warnings.catch_warnings():
